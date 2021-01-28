@@ -9,45 +9,82 @@
     <!-- Styles should be switched here: -->
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
 
     <title>Explore the world of ocean</title>
   </head>
 
   <body>
     <div class="main-wrapper">
-      <header>
+      <header class="header">
         <div class="top-wrapper">
-          <div class="logo">
-            <img src="img/logo.png" alt="">
+          <div class="header__logo">
+            <img
+              class="header__logo-img"
+              src="img/logo.png"
+              alt="">
           </div>
 
-          <nav>
-            <a role="button" href="#list" target="_self">Blog</a>
-            <a role="button" href="#about" target="_self">About</a>
-            <a role="button" href="#contact" target="_self">Contact</a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a
+                  class="heade__nav-link"
+                  role="button"
+                  href="#list"
+                  target="_self"
+                >
+                  Blog
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a
+                  class="heade__nav-link"
+                  role="button"
+                  href="#about"
+                  target="_self"
+                >
+                  About
+                </a>
+              </li>
+              <li class="header__nav-item">
+                <a
+                  class="heade__nav-link"
+                  role="button"
+                  href="#contact"
+                  target="_self"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
           </nav>
         </div>
-        <section>
-          <h1>
+        <section class="attraction header__attraction">
+          <h1 class="attraction__title">
             Explore the fantastic beauty of our world
           </h1>
-          <a class="btn btn-top" href="#list" target="_self">Dive now</a>
+          <a class="attraction__button" href="#list" target="_self">Dive now</a>
         </section>
       </header>
       <main>
-        <div class="toolbar">
-          <input type="text" placeholder="Search">
+        <div class="toolbar-wrapper">
+          <div class="toolbar">
+            <input class="toolbar__search" type="text" placeholder="Search">
+          </div>
         </div>
         <section class="post-list" id="list">
-          <h1>Blog</h1>
-          <article>
-            <img src="img/post-1.jpg" alt="">
+          <div class="p-l-title-wrapper">
+            <h2 class="post-list__title">Blog</h2>
+          </div>
+          <article class="post-list__item">
+            <img class="post-list__item-img" src="img/post-1.jpg" alt="">
             <div>
-              <div class="post">
-                <div class="post-description">
+              <div class="post-list__item-text-content">
+                <div class="post-list__item-author">
                   Admin Jul 25 &#8226; 2 min
                 </div>
-                <h3>The Top Five Places To Learn To Dive</h3>
+                <h3 class="post-list__item-title">The Top Five Places To Learn To Dive</h3>
                 <p>
                   Divers are really astronauts; gliding weightless through the ocean we observe alien worlds carpeted
                   in
@@ -60,17 +97,19 @@
                   (sorry) ground control.
                 </p>
               </div>
-              <button class="btn">More...</button>
+              <div class="post-list__item-btn-wrapper">
+                <button class="btn post-list__item-button">More...</button>
+              </div>
             </div>
           </article>
-          <article>
-            <img src="img/post-2.jpg" alt="">
+          <article class="post-list__item">
+            <img class="post-list__item-img" src="img/post-2.jpg" alt="">
             <div>
-              <div class="post">
-                <div class="post-description">
+              <div class="post-list__item-text-content" >
+                <div class="post-list__item-author">
                   Admin Jul 25 &#8226; 10 min
                 </div>
-                <h3>Dive Into 2019</h3>
+                <h3 class="post-list__item-title">Dive Into 2019</h3>
                 <p>
                   As the nights draw in, the temperature drops (we had a good run) and businesses start to compete for
                   the
@@ -82,17 +121,19 @@
                   track diving adventures.
                 </p>
               </div>
-              <button class="btn">More...</button>
+              <div class="post-list__item-btn-wrapper">
+                <button class="btn post-list__item-button">More...</button>
+              </div>
             </div>
           </article>
-          <article>
-            <img src="img/post-3.jpg" alt="">
+          <article class="post-list__item">
+            <img class="post-list__item-img" src="img/post-3.jpg" alt="">
             <div>
-              <div class="post">
-                <div class="post-description">
+              <div class="post-list__item-text-content">
+                <div class="post-list__item-author">
                   Admin Jul 25 &#8226; 15 min
                 </div>
-                <h3>Short Haul Winter Diving Destinations</h3>
+                <h3 class="post-list__item-title">Short Haul Winter Diving Destinations</h3>
                 <p>
                   As we (at least those of us based in Europe) are slowly stepping into the cold of winter and dusting
                   off
@@ -101,17 +142,19 @@
                   where the temperature won't chill your bones and the waters remain unfrozen. Enjoy!
                 </p>
               </div>
-              <button class="btn">More...</button>
+              <div class="post-list__item-btn-wrapper">
+                <button class="btn post-list__item-button">More...</button>
+              </div>
             </div>
           </article>
-          <article>
-            <img src="img/post-4.jpg" alt="">
+          <article class="post-list__item">
+            <img class="post-list__item-img" src="img/post-4.jpg" alt="">
             <div>
-              <div class="post">
-                <div class="post-description">
+              <div class="post-list__item-text-content">
+                <div class="post-list__item-author">
                   Admin Jul 25 &#8226; 20 min
                 </div>
-                <h3>Beat the System</h3>
+                <h3 class="post-list__item-title">Beat the System</h3>
                 <p>
                   Question: do you consider yourself a canny operator (*taps nose and winks*)? Are you willing to buck
                   the
@@ -122,17 +165,19 @@
                   system, whether travelling out of season.
                 </p>
               </div>
-              <button class="btn">More...</button>
+              <div class="post-list__item-btn-wrapper">
+                <button class="btn post-list__item-button">More...</button>
+              </div>
             </div>
           </article>
-          <article>
-            <img src="img/post-5.jpg" alt="">
+          <article class="post-list__item">
+            <img class="post-list__item-img" src="img/post-5.jpg" alt="">
             <div>
-              <div class="post">
-                <div class="post-description">
+              <div class="post-list__item-text-content" >
+                <div class="post-list__item-author">
                   Admin Jul 25 &#8226; 28 min
                 </div>
-                <h3>Diving The Galapagos</h3>
+                <h3 class="post-list__item-title">Diving The Galapagos</h3>
                 <p>
                   This year I turn 30. At the start of the year I decided that it was going to be a big year for me;
                   figure out my five year plan, set some challenges, say 'yes' to as much as possible and go on some
@@ -140,29 +185,35 @@
                   completing a ski marathon so that doubled with a challenge.
                 </p>
               </div>
-              <button class="btn">More...</button>
+              <div class="post-list__item-btn-wrapper">
+                <button class="btn post-list__item-button">More...</button>
+              </div>
             </div>
           </article>
-          <article>
-            <img src="img/post-6.jpg" alt="">
+          <article class="post-list__item">
+            <img class="post-list__item-img" src="img/post-6.jpg" alt="">
             <div>
-              <div class="post">
-                <div class="post-description">
+              <div class="post-list__item-text-content" >
+                <div class="post-list__item-author">
                   Admin Jul 25 42 min
                 </div>
-                <h3>The 8 Best Dive Sites in the World</h3>
+                <h3 class="post-list__item-title">The 8 Best Dive Sites in the World</h3>
                 <p>Bucket lists are for landlubbers. If you're a diver, and the ocean is your oyster, then you NEED to
                   dive
                   these spots, arguably the greatest dive sites on our blue planet.</p>
               </div>
-              <button class="btn">More...</button>
+              <div class="post-list__item-btn-wrapper">
+                <button class="btn post-list__item-button">More...</button>
+              </div>
             </div>
           </article>
         </section>
 
         <section class="about" id="about">
-          <div>
-            <h1>About Us</h1>
+          <div class="about__info">
+            <div class="about-title-wrapper">
+              <h1 class=about__title>About Us</h1>
+            </div>
             <p>
               Our approach differs from other travel companies; we are a group of dedicated divers, marine biologists
               and
@@ -183,17 +234,37 @@
               back, relax and enjoy your Original Diving holiday.
             </p>
           </div>
-          <div>
-            <img src="img/about-section.jpg" alt="">
+          <div class="about__visual">
+            <img
+              class="about__visual-img"
+              src="img/about-section.jpg"
+              alt=""
+            >
           </div>
         </section>
 
-        <section class="contact-form" id="contact">
-          <h1>CONTACT US</h1>
-          <h4>For any questions you may have, you can write us:</h4>
-
-          <!-- TODO: write form fields -->
-
+        <section class="contacts" id="contact">
+          <div class="contacts__titles-wrapper">
+            <h2 class="contacts__title">CONTACT US</h2>
+            <p class="contacts__sub-title">For any questions you may have, you can write us:</p>
+          </div>
+          <form class="contacts__form" action="#" name="newform">
+            <div class="contacts__form-inputs">
+              <label> <span class="contacts__form-input-title">Name *</span>
+                <input class="contacts__form-input" type="text">
+              </label>
+              
+              <label> <span class="contacts__form-input-title contacts__form-input-title--left">Email address *</span>
+                <input class="contacts__form-input" type="text">
+              </label>
+              
+            </div>
+            <label for="message"><span class="contacts__form-message-title">Write your question below</span></label>
+            <textarea class="contacts__form-message" id="message" name="message"></textarea>
+            <div class="contacts__form-btn-wrapper">
+              <input class="btn contacts__form-button" type="submit" value="SEND">
+            </div>
+          </form>
         </section>
       </main>
       <footer>

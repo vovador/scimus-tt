@@ -1,1 +1,316 @@
-// Write your styles here
+body {
+  width: 100%;
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none; 
+ }
+ ul {
+  margin-left: 0;
+  padding-left: 0;
+ }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  // width: 100;
+  height: 100vh;
+
+  background-image: url('../img/header_background_v1.jpg');
+  background-position: bottom center;
+  background-size: cover;
+
+  &__logo {
+    &-img {
+      width: 222px;
+      height: auto;
+
+    }
+  }
+
+  &__nav {
+    margin-top: 20px;
+    margin-right: 115px;
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-item {
+      color: white;
+      font-size: 20px;
+      text-transform: uppercase;
+      font-family: $title-fonts;
+      transition: 0.5s;
+
+      &:hover::after{
+        content: '';
+        display: block;
+        height: 2px;
+        background-color: white;
+      }
+    }
+
+    &-item:not(:last-child) {
+      margin-right: 237px;
+    }
+  }
+
+  &__attraction {
+    align-self: center;
+    margin-top: 25vh;
+  }
+}
+
+.attraction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    text-transform: uppercase;
+    color: #ececec;
+    font-family: $title-fonts;
+    margin-bottom: 22px;
+  }
+  &__button {
+    height: 45px;
+    width: 200px;
+    line-height: 45px;
+    background-color: #01acac;
+    display: block;
+    text-align: center;
+    @include button-text;
+    transition-property: color, background-color;
+    transition-duration: 0.5s;
+
+    &:hover {
+      color: #01acac;
+      background-color: transparent;
+      border: 1px solid #01acac;
+    }
+  }
+}
+
+.btn {
+  width: 200px;
+  height: 38px;
+  background-color: #01acac;
+  border: none;
+  cursor: pointer;
+  @include button-text;
+  transition-duration: 0.5s;
+
+  &:hover {
+    color: #01acac;
+    background-color: #ececec;
+    border: 1px solid #01acac;
+  }
+}
+
+.toolbar-wrapper {
+  width: 957px;
+  margin: 0 auto;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+
+  &__search {
+    height: 38px;
+    width: 200px;
+    margin: 17px 0;
+  }
+}
+
+.p-l-title-wrapper {
+  @extend .toolbar-wrapper, .toolbar;
+
+
+}
+
+
+
+.top-wrapper {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    @include sub-title-text;
+  }
+
+  &__item {
+    display: flex;
+    width: 957px;
+    margin-bottom: 25px;
+
+    font-family: $title-fonts;
+
+    padding: 10px;
+
+    background-color: #efefef;
+
+    &-title {
+      font-family: $title-fonts;
+      text-transform: uppercase;
+      color: #0097a7;
+    }
+
+    &-text-content {
+      padding-left: 10px;
+    }
+
+    &-author {
+      height: 35px;
+
+
+      font-size: 15px;
+
+      color: #e90303;
+
+      border-bottom: 1px solid gray;
+    }
+
+    &-img {
+      width: 282px;
+      height: auto;
+    }
+
+    &-btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-title-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 957px;
+    margin: 0 auto;
+
+  }
+
+  &__visual {
+    &-img {
+      width: 957px;
+      height: auto;
+    }
+  }
+
+  &__info {
+    width: 957px;
+    margin-top: 45px;
+
+    font-family: $title-fonts;
+  }
+
+  &__title {
+    @include sub-title-text;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-family: $title-fonts;
+  }
+
+  &__sub-title {
+    font-family: $title-fonts;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__titles-wrapper {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 957px;
+  }
+
+  &__form {
+    width: 957px;
+
+    &-inputs {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-input {
+      width: 460px;
+      height: 45px;
+
+      &-title {
+        display: block;
+        width: 460px;
+        margin: 0;
+        padding: 0;
+
+        @include input-title-text;
+
+        &--left {
+          text-align: right;
+        }
+      }
+    }
+
+    &-message {
+      width: 952px;
+      height: 120px;
+
+      &-title {
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 0;
+        padding: 0;
+        @include input-title-text;
+        @extend .contacts__form-input-title--left
+      }
+    }
+
+    &-btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &-button {
+      margin-top: 20px;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+}
+

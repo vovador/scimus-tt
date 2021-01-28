@@ -1,0 +1,17 @@
+$title-fonts: Arial, Helvetica, sans-serif;
+
+@mixin button-text {
+  font-family: $title-fonts;
+  text-transform: uppercase;
+  color: #ececec;
+}
+
+@mixin sub-title-text {
+  font-family: $title-fonts;
+  text-transform: uppercase;
+}
+
+@mixin input-title-text {
+  font-family: $title-fonts;
+  color: #0097a7;
+}
